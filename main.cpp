@@ -4,7 +4,7 @@
 #define NONE		0
 #define MULTIPLY	1
 #define DIVIDE		2
-#define ADD			3
+#define ADD		3
 #define SUBTRACT	4
 #define MAXIMUM		5
 #define MINIMUM		6
@@ -75,7 +75,7 @@
 
 	
 
-	// NOTE: extern ìCî needed to prevent C++ name mangling
+	// NOTE: extern ‚ÄúC‚Äù needed to prevent C++ name mangling
 	extern "C"
 	{
 		double		CombineA(int a, int b, int c, int d, int e, double f);					//sse2
@@ -89,12 +89,12 @@
 		float		FuncFloats(float *af, float *bf, float *cf);							//sse,sse2,sse4.1
 		HANDLE		CreateThreadInAsm(int *i);												//none dont use possible problem
 		void		FuncThreadStart(int *i);												//none dont use possible problem
-		void        FuncAvx(double *dp_in, double *dp_out, float *fp_in, float *fp_out);	//fvx
+		void        	FuncAvx(double *dp_in, double *dp_out, float *fp_in, float *fp_out);	//fvx
 		void		FuncRetInfo(int flag, int *len,struct _CpuData *);						//none
 		double		FuncArithmetic(struct _MULTIPLY_FPDOUBLE *array);						//sse,sse2,sse3
 		void		FuncGetFlags(struct _CPUFLAGS *);										//none
-		BYTE        CheckBitSet(LARGE_INTEGER Data, BYTE bitpos);							//none
-		bool        GetSysDetails(struct _SYSTEM_INFO_DETAILS *SystemDetails);				//none
+		BYTE        	CheckBitSet(LARGE_INTEGER Data, BYTE bitpos);							//none
+		bool        	GetSysDetails(struct _SYSTEM_INFO_DETAILS *SystemDetails);				//none
 		void		GetStartTimeStamp(ULARGE_INTEGER *);									//none
 		void		GetEndTimeStamp(ULARGE_INTEGER *,ULARGE_INTEGER *,ULARGE_INTEGER *);	//none
 		BOOL		GetTicksForOneMs(ULARGE_INTEGER *);										//sse2
@@ -144,8 +144,8 @@
 		bool favx		= false;
 		bool fsse3		= false;
 		bool fssse3		= false;
-		bool fsse4_1	= false;
-		bool fsse4_2	= false;
+		bool fsse4_1		= false;
+		bool fsse4_2		= false;
 		bool fsse2		= false;
 		bool fsse		= false;
 		bool fmmx		= false;
